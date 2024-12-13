@@ -8,10 +8,9 @@ const getDataFromNBP = async () => {
   const res = await fetch("https://api.nbp.pl/api/exchangerates/tables/A/?format=json")
   const jsonData = await res.json();
   console.log(jsonData)
-  const rates = jsonData(0).rates
+  const rates = jsonData[0].rates
   console.log(rates)
 }
-
 getDataFromNBP()
 // async function handleSubmit(e) {
 //   e.preventDefault();
